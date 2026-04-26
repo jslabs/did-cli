@@ -1,6 +1,6 @@
 {
   "name": "@jslabs/did-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Minimal CLI for key generation, hashing, signing, and verifying messages for DID-style identity systems",
   "type": "module",
   "bin": {

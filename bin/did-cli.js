@@ -40,7 +40,11 @@ function signMessage(privateKeyBase64, message) {
     const msg = util.decodeUTF8(message);
 
     const sig = nacl.sign.detached(msg, secretKey);
-    return Buffer.from(sig).toString("base64");
+
+    return {
+        signature: Buffer.from(sig).toString("base64"),
+        signatureMultibase: "z" + bs58.encode(sig)
+    };
 }
 
 function verifyMessage(publicKeyBase64, message, signatureBase64) {
